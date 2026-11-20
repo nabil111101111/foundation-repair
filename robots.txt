@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://foundation-pilot.vercel.app/sitemap.xml
+Sitemap: https://foundationrepair-khaki.vercel.app/sitemap.xml
