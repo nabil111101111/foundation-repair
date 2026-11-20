@@ -1,0 +1,61 @@
+/* FoundationMatch pilot — shared styles (v2 AEO build) */
+:root{--ink:#243024;--mut:#5c6656;--line:#dde3d8;--bg:#fbfaf7;--accent:#5b7a4e;--accent-d:#41573a;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.65}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+.header-in{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:bold;font-size:1.25rem;color:var(--ink);text-decoration:none}
+nav a{margin-left:18px;color:var(--mut);text-decoration:none;font-size:.98rem}
+nav a:hover{color:var(--ink)}
+.nav-cta{color:var(--accent-d)!important;font-weight:bold}
+main section{padding:26px 0;border-bottom:1px solid var(--line)}
+.hero{padding-top:36px}
+h1{font-size:2.1rem;line-height:1.2;margin:0 0 14px}
+h2{font-size:1.5rem;margin:0 0 12px}
+h3{font-size:1.12rem;margin:0 0 6px}
+.lead{font-size:1.08rem}
+.button{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:8px}
+.button:hover{background:var(--accent-d)}
+.signs,.checklist{padding-left:20px}
+.signs li,.checklist li{margin-bottom:8px}
+table.costs,table.data{width:100%;border-collapse:collapse;background:var(--card);margin:14px 0}
+table.costs th,table.costs td,table.data th,table.data td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;font-size:.97rem}
+table.costs th,table.data th{background:#eef4ea}
+table.data caption{text-align:left;font-weight:bold;padding:6px 0}
+td.price{white-space:nowrap;font-weight:bold}
+.methods,.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.method,.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.qa h3{margin-bottom:4px}
+.qa p{margin:0}
+figure.visual{margin:10px 0 4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+figure.visual svg{width:100%;height:auto;display:block}
+figure.visual figcaption{font-size:.9rem;color:var(--mut);margin-top:8px}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.city-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;text-decoration:none;color:var(--ink)}
+.city-card span{display:block;color:var(--mut);font-size:.9rem;margin-top:2px}
+.city-card:hover{border-color:var(--accent)}
+.cta{background:#eef4ea;border:1px solid var(--line);border-radius:12px;padding:24px;margin:26px 0}
+.cta form{display:grid;gap:12px;max-width:480px}
+.cta label{font-weight:bold;font-size:.95rem}
+.cta input,.cta textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:4px}
+.cta button{background:var(--accent);color:#fff;border:0;padding:12px;border-radius:8px;font:inherit;font-weight:bold;cursor:pointer}
+.call-note{color:var(--mut);font-size:.92rem}
+.site-footer{background:#fff;border-top:1px solid var(--line);padding:26px 0 40px;margin-top:10px}
+.foot-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:14px}
+.foot-col ul{list-style:none;padding:0;margin:6px 0}
+.foot-col li{margin-bottom:5px}
+.foot-col a{color:var(--mut);text-decoration:none;font-size:.93rem}
+.foot-col a:hover{color:var(--ink)}
+@media (max-width:640px){h1{font-size:1.7rem}nav a{margin-left:10px;font-size:.9rem}}
+figure.photo{margin:18px 0}
+figure.photo img{max-width:100%;height:auto;border-radius:10px;display:block}
+figure.photo figcaption{font-size:.82rem;color:var(--mut);margin-top:6px}
+p.src{font-size:.8rem;color:var(--mut)}
+form.calc label{display:block;margin:10px 0;font-weight:600}
+form.calc select,form.calc input[type=number]{display:block;margin-top:4px;padding:9px;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;max-width:340px;width:100%}
+form.calc input[type=checkbox]{margin-right:8px}
+video.vid{width:100%;max-width:760px;height:auto;border-radius:10px;display:block;margin:14px 0 4px;background:#0d1b2e}
+.calc-out{margin-top:16px}
+.calc-out h3{color:var(--brand,#1e3a5f)}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Repair Cost Calculator — Estimate by City, Soil &amp; Problem</title>
+<meta name="description" content="Free foundation repair cost calculator: estimate piers, slabjacking, drainage and wall stabilisation ranges for your city, using published price bands and real local soil data.">
+<link rel="canonical" href="https://foundation-pilot.vercel.app/foundation-repair-cost-calculator">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this foundation repair cost calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It gives a planning range, not a quote. Figures come from the published market ranges used across this site (piers at $1,000\u2013$2,500 installed, drainage at $2,000\u2013$6,000), combined with standard pier spacing of about 5\u20137 feet. Your real number depends on measured movement, soil depth to stable bearing, and access \u2014 which is why the next step after a range is always a free in-person inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the city change the estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The city changes the context, not the unit prices. Soil series and shrink\u2013swell rating affect how many piers a wall typically needs and how deep they must go; housing age affects footing style. The calculator shows your city's measured soil and housing data alongside the range so you can see why one city's typical job differs from another's."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many piers does a house need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most settling walls need piers every 5\u20137 feet along the affected length: a single corner often takes 4\u20136, one full side 8\u201314, and a whole house 15\u201325 or more. Enter the length of wall that has dropped and the calculator converts it at 6-foot spacing, then prices that count at the published per-pier range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the calculator not include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It does not include cosmetic repairs (drywall, brick repointing, door rehanging), permits, engineering reports, or landscaping restoration, and it cannot price interior piers or access problems. Treat the top of the range as your planning number and get itemised quotes \u2014 our cost guide shows the red flags to check in any quote."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://foundation-pilot.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Foundation Repair Cost Calculator",
+      "item": "https://foundation-pilot.vercel.app/foundation-repair-cost-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakableSpecification": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lead",
+      ".faq-a"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html">FoundationMatch</a>
+    <nav>
+      <a href="foundation-repair.html">Foundation repair</a>
+      <a href="foundation-repair-cost.html">Costs</a>
+      <a href="foundation-repair-cost-calculator.html">Cost calculator</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="index.html#cities">Cities</a>
+      <a href="#quote" class="nav-cta">Free inspection</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Foundation Repair Cost Calculator</h1>
+    <p class="lead">Estimate a planning range for your repair in under a minute — pick your city, the problem, and the length of wall affected. The estimate uses published price ranges and your city's real soil and housing-age data.</p>
+  </section>
+  <section>
+    <h2>Your estimate</h2>
+    <form id="calc" class="calc" onsubmit="return false">
+      <label>Your city
+        <select id="cc-city">      <option value="des-moines-ia">Des Moines, IA</option>
+      <option value="baton-rouge-la">Baton Rouge, LA</option>
+      <option value="new-orleans-la">New Orleans, LA</option>
+      <option value="shreveport-la">Shreveport, LA</option>
+      <option value="lexington-ky">Lexington, KY</option>
+      <option value="madison-wi">Madison, WI</option>
+      <option value="cedar-rapids-ia">Cedar Rapids, IA</option>
+      <option value="gulfport-ms">Gulfport, MS</option>
+      <option value="boise-id">Boise, ID</option>
+      <option value="abilene-tx">Abilene, TX</option>
+        </select></label>
+      <label>Problem you are seeing
+        <select id="cc-problem">
+          <option value="settlement">A wall or corner is sinking</option>
+          <option value="slab">Slab floor has dropped or cracked</option>
+          <option value="water">Water getting into basement or crawl space</option>
+          <option value="walls">Basement wall bowing inward</option>
+        </select></label>
+      <label>Length of affected wall (feet)
+        <input id="cc-length" type="number" min="4" max="200" value="30"></label>
+      <label>Wall straps needed, if walls are bowing (count)
+        <input id="cc-straps" type="number" min="0" max="40" value="0"></label>
+      <label><input id="cc-drain" type="checkbox"> Add interior drainage + sump system</label>
+      <p><button class="button" id="cc-go" type="button">Calculate my range</button></p>
+    </form>
+    <div id="cc-out" class="calc-out" aria-live="polite"></div>
+    <p class="src">Price bands: piers $1,000–$2,500 each installed; slabjacking $500–$1,500 per section; carbon-fibre straps $500–$1,200 each; interior drainage with sump $2,000–$6,000. Published market ranges (Angi/HomeAdvisor/HomeGuide class data, compiled October 2026) — the same bands used in our <a href="foundation-repair-cost.html">cost guide</a>. Soil and housing data: USDA SSURGO, Open-Meteo ERA5, US Census ACS 2023 via Census Reporter.</p>
+  </section>
+<section>
+  <h2>Calculator questions</h2>
+    <div class="qa"><h3>How accurate is this foundation repair cost calculator?</h3><p class="faq-a">It gives a planning range, not a quote. Figures come from the published market ranges used across this site (piers at $1,000–$2,500 installed, drainage at $2,000–$6,000), combined with standard pier spacing of about 5–7 feet. Your real number depends on measured movement, soil depth to stable bearing, and access — which is why the next step after a range is always a free in-person inspection.</p></div>
+    <div class="qa"><h3>Why does the city change the estimate?</h3><p class="faq-a">The city changes the context, not the unit prices. Soil series and shrink–swell rating affect how many piers a wall typically needs and how deep they must go; housing age affects footing style. The calculator shows your city&#x27;s measured soil and housing data alongside the range so you can see why one city&#x27;s typical job differs from another&#x27;s.</p></div>
+    <div class="qa"><h3>How many piers does a house need?</h3><p class="faq-a">Most settling walls need piers every 5–7 feet along the affected length: a single corner often takes 4–6, one full side 8–14, and a whole house 15–25 or more. Enter the length of wall that has dropped and the calculator converts it at 6-foot spacing, then prices that count at the published per-pier range.</p></div>
+    <div class="qa"><h3>What does the calculator not include?</h3><p class="faq-a">It does not include cosmetic repairs (drywall, brick repointing, door rehanging), permits, engineering reports, or landscaping restoration, and it cannot price interior piers or access problems. Treat the top of the range as your planning number and get itemised quotes — our cost guide shows the red flags to check in any quote.</p></div>
+</section>
+
+<section class="cta" id="quote">
+  <h2>Request a free foundation inspection</h2>
+  <p>Tell us where you are and what you are seeing — a local specialist will call you back to schedule it.</p>
+  <!-- PLACEHOLDER: form endpoint not connected yet. Wire action="#" to the lead
+       endpoint / CRM before launch. -->
+  <form action="#" method="post">
+    <label>Full name
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+    <label>Phone number
+      <input type="tel" name="phone" autocomplete="tel" required>
+    </label>
+    <label>City
+      <input type="text" name="city" required>
+    </label>
+    <label>What are you noticing? (optional)
+      <textarea name="details" rows="3" placeholder="Cracks, sticking doors, sloping floors, water in the basement..."></textarea>
+    </label>
+    <button type="submit">Request my free inspection</button>
+  </form>
+  <!-- PLACEHOLDER: call-tracking number goes here before launch. No number is
+       shown in the draft on purpose — do not invent one. -->
+  <p class="call-note">Prefer to talk first? [Call-tracking phone number to be added before launch]</p>
+</section>
+
+<script>
+var CDATA = {"des-moines-ia": {"name": "Des Moines, IA", "series": "Clarion", "lep": 1.3, "lepClass": "low", "pre80": 70.2, "rain": 37.6}, "baton-rouge-la": {"name": "Baton Rouge, LA", "series": "Oprairie", "lep": 4.5, "lepClass": "moderate", "pre80": 46.8, "rain": 61.9}, "new-orleans-la": {"name": "New Orleans, LA", "series": "Schriever", "lep": 19.2, "lepClass": "high", "pre80": 73.8, "rain": 68.7}, "shreveport-la": {"name": "Shreveport, LA", "series": "Caplis", "lep": 17.0, "lepClass": "high", "pre80": 61.1, "rain": 54.0}, "lexington-ky": {"name": "Lexington, KY", "series": "Maury", "lep": 7.4, "lepClass": "high", "pre80": 44.9, "rain": 52.6}, "madison-wi": {"name": "Madison, WI", "series": "Dodge", "lep": 3.7, "lepClass": "moderate", "pre80": 50.9, "rain": 36.7}, "cedar-rapids-ia": {"name": "Cedar Rapids, IA", "series": "Clyde", "lep": 4.2, "lepClass": "moderate", "pre80": 60.6, "rain": 38.3}, "gulfport-ms": {"name": "Gulfport, MS", "series": "Pactolus", "lep": 0.3, "lepClass": "low", "pre80": 37.3, "rain": 69.6}, "boise-id": {"name": "Boise, ID", "series": "Polecat", "lep": 4.9, "lepClass": "moderate", "pre80": 41.0, "rain": 14.4}, "abilene-tx": {"name": "Abilene, TX", "series": "Hamby", "lep": 4.5, "lepClass": "moderate", "pre80": 53.9, "rain": 22.6}};
+function money(n) { return "$" + n.toLocaleString("en-US"); }
+document.getElementById("cc-go").addEventListener("click", function () {
+  var slug = document.getElementById("cc-city").value;
+  var prob = document.getElementById("cc-problem").value;
+  var len = Math.max(4, parseInt(document.getElementById("cc-length").value || "0", 10));
+  var straps = Math.max(0, parseInt(document.getElementById("cc-straps").value || "0", 10));
+  var drain = document.getElementById("cc-drain").checked;
+  var d = CDATA[slug] || {};
+  var lines = [], lo = 0, hi = 0;
+  if (prob === "settlement" || prob === "walls") {
+    var piers = Math.ceil(len / 6) + 1;
+    lo += piers * 1000; hi += piers * 2500;
+    lines.push(piers + " piers at 6-foot spacing along " + len + " ft of wall: " + money(piers * 1000) + "–" + money(piers * 2500));
+  }
+  if (prob === "slab") {
+    var secs = Math.max(1, Math.ceil(len / 10));
+    lo += secs * 500; hi += secs * 1500;
+    lines.push("Slabjacking, about " + secs + " sections: " + money(secs * 500) + "–" + money(secs * 1500) + " (foam injection can run higher)");
+  }
+  if (prob === "water" && !drain) { drain = true; }
+  if (straps > 0) {
+    lo += straps * 500; hi += straps * 1200;
+    lines.push(straps + " carbon-fibre wall straps: " + money(straps * 500) + "–" + money(straps * 1200));
+  }
+  if (drain) {
+    lo += 2000; hi += 6000;
+    lines.push("Interior drainage + sump system: $2,000–$6,000");
+  }
+  var ctx = "";
+  if (d.series) {
+    ctx = "<p><strong>Local context — " + d.name + ":</strong> sampled soil is " + d.series +
+      " (shrink–swell LEP " + d.lep + "%, rated " + d.lepClass + "); " + d.pre80 +
+      "% of homes predate 1980; average rainfall is " + d.rain + " inches a year. " +
+      "High shrink–swell soil and older footings are exactly the combination that makes " +
+      "measured, itemised quotes matter — do not accept a phone price.</p>";
+  }
+  document.getElementById("cc-out").innerHTML =
+    "<h3>Your planning range: " + money(lo) + " – " + money(hi) + "</h3><ul><li>" +
+    lines.join("</li><li>") + "</li></ul>" + ctx +
+    "<p>This is an estimate from published ranges, not a quote. A free inspection measures the actual movement and turns this range into an itemised number.</p>";
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>FoundationMatch</strong> connects homeowners with independent local foundation specialists. We are an information and matching service, not a contractor — your inspection and repair are handled by the local professional you are matched with.</p>
+    <div class="foot-cols">
+    <div class="foot-col"><h3>Services</h3>
+      <ul>
+        <li><a href="foundation-repair.html">Foundation repair</a></li>
+        <li><a href="pier-installation.html">Pier installation</a></li>
+        <li><a href="slabjacking.html">Slabjacking</a></li>
+        <li><a href="crawl-space-repair.html">Crawl-space repair</a></li>
+        <li><a href="basement-waterproofing-drainage.html">Waterproofing &amp; drainage</a></li>
+        <li><a href="foundation-crack-repair.html">Crack repair</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Problems</h3>
+      <ul>
+        <li><a href="foundation-wall-cracks.html">Wall cracks</a></li>
+        <li><a href="sticking-doors-foundation-problem.html">Sticking doors</a></li>
+        <li><a href="uneven-floors.html">Uneven floors</a></li>
+        <li><a href="bowed-basement-walls.html">Bowed walls</a></li>
+        <li><a href="sinking-foundation.html">Sinking foundation</a></li>
+        <li><a href="water-in-basement-foundation.html">Water in basement</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Guides</h3>
+      <ul>
+        <li><a href="foundation-repair-cost.html">Repair costs</a></li>
+        <li><a href="foundation-repair-insurance-financing.html">Insurance &amp; financing</a></li>
+        <li><a href="foundation-types.html">Foundation types</a></li>
+        <li><a href="foundation-repair-glossary.html">Glossary</a></li>
+        <li><a href="watering-your-foundation.html">Watering your foundation</a></li>
+        <li><a href="frost-heave-explained.html">Frost heave explained</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>About</h3>
+      <ul>
+        <li><a href="about.html">About FoundationMatch</a></li>
+        <li><a href="how-we-make-money.html">How we make money</a></li>
+        <li><a href="how-to-choose-a-foundation-repair-company.html">Choosing a company</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Cities</h3>
+      <ul>
+        <li><a href="foundation-repair-des-moines-ia.html">Des Moines, IA</a></li>
+        <li><a href="foundation-repair-baton-rouge-la.html">Baton Rouge, LA</a></li>
+        <li><a href="foundation-repair-new-orleans-la.html">New Orleans, LA</a></li>
+        <li><a href="foundation-repair-shreveport-la.html">Shreveport, LA</a></li>
+        <li><a href="foundation-repair-lexington-ky.html">Lexington, KY</a></li>
+        <li><a href="foundation-repair-madison-wi.html">Madison, WI</a></li>
+        <li><a href="foundation-repair-cedar-rapids-ia.html">Cedar Rapids, IA</a></li>
+        <li><a href="foundation-repair-gulfport-ms.html">Gulfport, MS</a></li>
+        <li><a href="foundation-repair-boise-id.html">Boise, ID</a></li>
+        <li><a href="foundation-repair-abilene-tx.html">Abilene, TX</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

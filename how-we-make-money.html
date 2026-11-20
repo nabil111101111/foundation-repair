@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Make Money — The FoundationMatch Lead Model, in Plain Words</title>
+<meta name="description" content="Homeowners pay nothing. Partner companies pay a fee per match. How the FoundationMatch lead model works, what the fee buys, and what it can never buy.">
+<link rel="canonical" href="https://foundation-pilot.vercel.app/how-we-make-money">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "How we make money",
+  "url": "https://foundation-pilot.vercel.app/how-we-make-money",
+  "description": "Homeowners pay nothing. Partner companies pay a fee per match. How the FoundationMatch lead model works, what the fee buys, and what it can never buy.",
+  "provider": {
+    "@type": "Organization",
+    "name": "FoundationMatch",
+    "url": "https://foundation-pilot.vercel.app/"
+  },
+  "serviceType": "Foundation repair information and contractor matching",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I pay anything, now or later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Using FoundationMatch costs a homeowner nothing at any stage: not for the request, not for the match, not after the repair. Our income comes entirely from partner companies paying for introductions. If a company ever presents a FoundationMatch fee on your invoice, or asks you to pay one, tell us, because that is outside the model described here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the partner's fee get added to my quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as a line item. The partner's quote prices the repair work: piers, labour, excavation, warranty. Our fee is a separate business cost the company pays for the introduction, the same way it would pay for advertising. A company could fold all its marketing costs into its general pricing, but your quote should still itemise repair work only, and you can compare it line by line."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a company pay more to get more matches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A partner cannot buy extra matches, better matches or matches outside its coverage area. Matches are allocated by where a company works, the kind of foundation work it does and whether it currently meets the published standards. If a company wants more work, the route is covering more of its own area well, not paying us a larger fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does paying the fee guarantee a company jobs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The fee buys an introduction to a homeowner who asked for help, nothing more. The company still has to inspect the home, quote the work and win the job against the homeowner's own judgement and any other quotes they gather. Plenty of introductions end with the homeowner choosing a different company or deciding not to repair at all, and no fee changes that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What decides which company I get matched with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three things decide your match: whether the company covers your city, whether it does the kind of work your home needs, and whether it currently meets the published partner standards on licensing, insurance, itemised quotes and warranty terms. Price paid to us is not one of the criteria. Where two companies qualify, you can ask for the second one as a comparison quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't like the company I was matched with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can walk away at any point, and you owe the company and us nothing for doing so. Tell us what went wrong: a vague quote, pressure to sign on the spot, or a pier count nobody explained are all things we record. Where another vetted company covers your area, we will match you again. Reports like yours are how the standards list stays honest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If the inspection is free, who is paying for it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The repair company pays for it, out of its marketing and sales budget. A free inspection is the company's chance to see the problem and propose the fix, which makes it useful and a sales call at the same time. That is not a reason to refuse one. It is a reason to insist on measurements and a written itemised quote afterwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I hire an engineer before any free inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your quotes disagree wildly, or the recommended work runs into five figures, yes: an independent structural engineer sells an opinion, not repairs, so the report has no pier count to inflate. Published sources put an engineer's foundation evaluation around $350\u2013$600. Many homeowners use the free inspections first and bring an engineer in when the numbers stop making sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I verify all of this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On this site. The partner criteria sit on the contractor standards page, the cost ranges show their sources and compilation date on the cost pages, and the About page states plainly that we are a matching service and not a contractor. Anything we claim that you cannot find in those places, you are entitled to treat as unproven."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is FoundationMatch really free for homeowners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is no charge to describe your problem, no charge for the match, and no percentage added if you go ahead with a repair. Our revenue comes from partner companies paying for introductions. The repair itself is contracted between you and the company, at the price in its written quote, and none of that money passes through FoundationMatch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do partner companies pay you?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees vary by market and by the agreement with each company, and we do not publish individual contracts. What we can tell you is the structure: a fee for an introduction, not a percentage of your repair bill and not a payment for ranking. Because the fee is not tied to your quote total, we earn the same whether your job is large or small."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a company pay to appear ahead of others?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, because there is no list to appear ahead on. You are matched with a company, not shown a ranking of advertisers. Matching runs on coverage, the type of work and the published standards. A company that fails those standards is removed however much it has paid in the past, and a company that meets them cannot buy its way past a better-fitting competitor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you sell my details to lots of companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your request goes to the company you are matched with so it can arrange the inspection you asked for. It is not auctioned, bundled or resold as part of a lead list. If you ask for a second opinion, we tell you before passing your details to a second company. You can also ask us to withdraw your details entirely at any point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will quotes through FoundationMatch cost more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They should not, and you can check. Every partner agrees to written itemised quotes, and our cost pages publish the going ranges: piers at $1,000\u2013$2,500 each installed and a typical structural repair at $4,000\u2013$12,000. Put any quote next to those ranges and ask about every line that sits outside them. A fair company will explain the difference in writing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If the repair goes wrong, what is FoundationMatch responsible for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The repair contract and warranty sit between you and the company that did the work, and that company is responsible for putting defects right under its warranty terms. Our responsibility is the matching: if a partner ignores its documented warranty or breaks the published standards, report it to us. Partners who do that are removed, and your report is part of that decision."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://foundation-pilot.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How we make money",
+      "item": "https://foundation-pilot.vercel.app/how-we-make-money"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakableSpecification": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lead",
+      ".faq-a"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html">FoundationMatch</a>
+    <nav>
+      <a href="foundation-repair.html">Foundation repair</a>
+      <a href="foundation-repair-cost.html">Costs</a>
+      <a href="foundation-repair-cost-calculator.html">Cost calculator</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="index.html#cities">Cities</a>
+      <a href="#quote" class="nav-cta">Free inspection</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <h1>How we make money</h1>
+    <p class="lead">The short version fits in one sentence: homeowners pay FoundationMatch nothing, and partner repair companies pay us a fee when we match them with a homeowner who asked for help. That fee is the entire business model. There is no second revenue stream hiding behind it, no charge to you at any stage, and no cut of your repair bill.</p>
+    <p>We publish this on its own page because most lead and directory sites do the opposite. The money arrangement gets buried in terms pages or contradicted between the homepage and the fine print, which leaves homeowners guessing whether the &#x27;free&#x27; inspection, the quote and the ranking were ever free of somebody&#x27;s fee. Guessing is avoidable. The model is simple, so here it is in full.</p>
+    <p>One thing this page will not give you is a fee figure for an individual company. Fees are set in private agreements and vary by market. What we can state plainly is the structure: what the fee is for, what it does not buy, and the rules that stop it from buying influence over your match.</p>
+    <a class="button" href="#quote">Request a free inspection</a>
+  </section>
+<figure class="visual"><svg viewBox="0 0 720 300" role="img" aria-label="The repair process: inspection, an itemised written quote, then the repair itself under warranty." xmlns="http://www.w3.org/2000/svg"><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5b7a4e"/></marker></defs><rect x="20" y="95" width="215" height="105" rx="10" fill="#eef4ea" stroke="#5b7a4e" stroke-width="2"/><circle cx="50" cy="125" r="16" fill="#5b7a4e"/><text x="50" y="131" font-size="17" fill="#fff" text-anchor="middle" font-weight="bold">1</text><text x="65" y="131" font-size="16.5" font-weight="bold" fill="#243024">Free inspection</text><text x="38" y="163" font-size="13.5" fill="#44503f">measurements + diagnosis</text><path d="M 238 147 L 270 147" stroke="#5b7a4e" stroke-width="3" marker-end="url(#arr)"/><rect x="255" y="95" width="215" height="105" rx="10" fill="#eef4ea" stroke="#5b7a4e" stroke-width="2"/><circle cx="285" cy="125" r="16" fill="#5b7a4e"/><text x="285" y="131" font-size="17" fill="#fff" text-anchor="middle" font-weight="bold">2</text><text x="300" y="131" font-size="16.5" font-weight="bold" fill="#243024">Written quote</text><text x="273" y="163" font-size="13.5" fill="#44503f">itemised, pier by pier</text><path d="M 473 147 L 505 147" stroke="#5b7a4e" stroke-width="3" marker-end="url(#arr)"/><rect x="490" y="95" width="215" height="105" rx="10" fill="#eef4ea" stroke="#5b7a4e" stroke-width="2"/><circle cx="520" cy="125" r="16" fill="#5b7a4e"/><text x="520" y="131" font-size="17" fill="#fff" text-anchor="middle" font-weight="bold">3</text><text x="535" y="131" font-size="16.5" font-weight="bold" fill="#243024">Repair + warranty</text><text x="508" y="163" font-size="13.5" fill="#44503f">documented, transferable</text></svg><figcaption>The repair process: inspection, an itemised written quote, then the repair itself under warranty.</figcaption></figure>
+<section>
+  <h2>The model, step by step</h2>
+  <p>Foundation repair companies need customers, and finding them costs money: advertising, sales staff, trucks driving to inspections that go nowhere. A matching service replaces some of that spending. A company pays us when we introduce it to a homeowner in its area who has described a real foundation problem and asked to be contacted. The fee pays for that introduction and the matching work behind it, in the same way the company would otherwise pay for ads and hope the phone rings.</p>
+  <p>Notice what is missing from the flow. You never hand us money, and your repair payment never passes through us. The quote you receive prices the repair work itself. Our fee is a separate arrangement between FoundationMatch and the company, settled under their agreement, and it does not appear as a line on your quote. If it ever did, that would contradict this page, and we would want to know.</p>
+  <ul class="checklist">
+    <li>You describe your foundation problem and your city — free</li>
+    <li>We match you with one vetted partner company — free to you</li>
+    <li>The partner inspects your home and quotes in writing — arranged between you and the company</li>
+    <li>The partner pays FoundationMatch a fee for the introduction</li>
+    <li>If you hire the partner, your contract, price and warranty are with that company alone</li>
+  </ul>
+    <div class="qa"><h3>Do I pay anything, now or later?</h3><p class="faq-a">No. Using FoundationMatch costs a homeowner nothing at any stage: not for the request, not for the match, not after the repair. Our income comes entirely from partner companies paying for introductions. If a company ever presents a FoundationMatch fee on your invoice, or asks you to pay one, tell us, because that is outside the model described here.</p></div>
+    <div class="qa"><h3>Does the partner&#x27;s fee get added to my quote?</h3><p class="faq-a">Not as a line item. The partner&#x27;s quote prices the repair work: piers, labour, excavation, warranty. Our fee is a separate business cost the company pays for the introduction, the same way it would pay for advertising. A company could fold all its marketing costs into its general pricing, but your quote should still itemise repair work only, and you can compare it line by line.</p></div>
+</section>
+<section>
+  <h2>What the fee does and does not pay for</h2>
+  <p>The fee pays for one thing: an introduction to a homeowner who asked for help with a foundation problem in the company&#x27;s own service area. It is payment for marketing, comparable to the cost of the ad click or the door knocker, except the company pays when a real request arrives instead of paying for exposure and hoping.</p>
+  <p>Here is what the fee does not buy. It does not buy a better position, because homeowners are matched, not shown a ranked list of advertisers. It does not buy matches outside the company&#x27;s area or beyond the work it actually does. It does not buy a gentler standards review, an exemption from the itemised-quote rule, or protection if homeowners report bad work. A partner that fails the published standards is removed, and fees it paid in the past buy it nothing at that point.</p>
+  <p>There is a fair question underneath this: if companies pay for introductions, do they simply charge homeowners more to cover it? Every business recovers its marketing costs from its prices in the long run, and we will not pretend foundation companies are an exception. What protects you is not the absence of a fee. It is competition plus paperwork: published price ranges to check against, itemised quotes you can compare, and the option of an independent engineer. A fee you know about, inside a process you can audit, is a different thing from a fee hidden inside a quote you cannot read.</p>
+    <div class="qa"><h3>Can a company pay more to get more matches?</h3><p class="faq-a">No. A partner cannot buy extra matches, better matches or matches outside its coverage area. Matches are allocated by where a company works, the kind of foundation work it does and whether it currently meets the published standards. If a company wants more work, the route is covering more of its own area well, not paying us a larger fee.</p></div>
+    <div class="qa"><h3>Does paying the fee guarantee a company jobs?</h3><p class="faq-a">No. The fee buys an introduction to a homeowner who asked for help, nothing more. The company still has to inspect the home, quote the work and win the job against the homeowner&#x27;s own judgement and any other quotes they gather. Plenty of introductions end with the homeowner choosing a different company or deciding not to repair at all, and no fee changes that.</p></div>
+</section>
+<section>
+  <h2>How the standards stop pay-to-rank</h2>
+  <p>The obvious risk in any lead model is that money quietly steers the recommendations. The defence is to make the steering rules public and mechanical. Matching runs on three criteria, all published: the company covers your city, it does the kind of work your home needs, and it currently meets the partner standards on licensing, insurance, written itemised quotes and documented warranty terms. The size of a company&#x27;s fee is not a fourth criterion, and there is no sponsored slot to sell.</p>
+  <p>The standards do the second half of the work. A company keeps receiving matches only while its licence and insurance stay current, its quotes stay itemised and in writing, and its warranty behaviour holds up against homeowner reports. That gives a partner a commercial reason to behave well that has nothing to do with us trusting it: lose the standards, lose the matches.</p>
+    <div class="qa"><h3>What decides which company I get matched with?</h3><p class="faq-a">Three things decide your match: whether the company covers your city, whether it does the kind of work your home needs, and whether it currently meets the published partner standards on licensing, insurance, itemised quotes and warranty terms. Price paid to us is not one of the criteria. Where two companies qualify, you can ask for the second one as a comparison quote.</p></div>
+    <div class="qa"><h3>What if I don&#x27;t like the company I was matched with?</h3><p class="faq-a">You can walk away at any point, and you owe the company and us nothing for doing so. Tell us what went wrong: a vague quote, pressure to sign on the spot, or a pier count nobody explained are all things we record. Where another vetted company covers your area, we will match you again. Reports like yours are how the standards list stays honest.</p></div>
+</section>
+<section>
+  <h2>Why free inspections exist, and what they really are</h2>
+  <p>Homeowners often ask why foundation companies offer free inspections if inspections cost them time and fuel. The answer is that the inspection is the company&#x27;s sales process. It is genuinely useful: somebody measures your floor elevations, maps the cracks and tells you what is moving. It is also the moment the company proposes the fix it sells. Both things are true at once, and pretending otherwise helps nobody.</p>
+  <p>That is why the independent route exists alongside it. A structural engineer sells an evaluation, not repairs, so an engineer&#x27;s report has no pier count to inflate; published sources put that evaluation around $350–$600. Our partners know homeowners may take either route, and the standards require their quotes in writing either way. A written, itemised quote is what turns a sales call into a document you can check, compare and hold a company to.</p>
+    <div class="qa"><h3>If the inspection is free, who is paying for it?</h3><p class="faq-a">The repair company pays for it, out of its marketing and sales budget. A free inspection is the company&#x27;s chance to see the problem and propose the fix, which makes it useful and a sales call at the same time. That is not a reason to refuse one. It is a reason to insist on measurements and a written itemised quote afterwards.</p></div>
+    <div class="qa"><h3>Should I hire an engineer before any free inspection?</h3><p class="faq-a">If your quotes disagree wildly, or the recommended work runs into five figures, yes: an independent structural engineer sells an opinion, not repairs, so the report has no pier count to inflate. Published sources put an engineer&#x27;s foundation evaluation around $350–$600. Many homeowners use the free inspections first and bring an engineer in when the numbers stop making sense.</p></div>
+</section>
+<section>
+  <h2>The disclosure, in one place</h2>
+  <p>That is the whole arrangement, with nothing held back for a terms page. If any other page on this site ever reads differently from the summary above, this page is the one to believe, and we would rather hear about the inconsistency than have you discover it after signing something. Hold us to it, always.</p>
+  <ul class="checklist">
+    <li>Homeowners pay FoundationMatch nothing, at any stage</li>
+    <li>Partner companies pay a fee for each introduction; fees vary by market and agreement</li>
+    <li>The fee is not a percentage of your repair bill and does not appear on your quote</li>
+    <li>The fee buys an introduction only — never ranking, placement or a softer standards review</li>
+    <li>FoundationMatch does not perform repairs; your contract and warranty are with the repair company</li>
+    <li>Partner standards are published, and partners who break them are removed from matching</li>
+  </ul>
+    <div class="qa"><h3>Where can I verify all of this?</h3><p class="faq-a">On this site. The partner criteria sit on the contractor standards page, the cost ranges show their sources and compilation date on the cost pages, and the About page states plainly that we are a matching service and not a contractor. Anything we claim that you cannot find in those places, you are entitled to treat as unproven.</p></div>
+</section>
+<section>
+  <h2>Frequently asked questions</h2>
+    <div class="qa"><h3>Is FoundationMatch really free for homeowners?</h3><p class="faq-a">Yes. There is no charge to describe your problem, no charge for the match, and no percentage added if you go ahead with a repair. Our revenue comes from partner companies paying for introductions. The repair itself is contracted between you and the company, at the price in its written quote, and none of that money passes through FoundationMatch.</p></div>
+    <div class="qa"><h3>How much do partner companies pay you?</h3><p class="faq-a">Fees vary by market and by the agreement with each company, and we do not publish individual contracts. What we can tell you is the structure: a fee for an introduction, not a percentage of your repair bill and not a payment for ranking. Because the fee is not tied to your quote total, we earn the same whether your job is large or small.</p></div>
+    <div class="qa"><h3>Can a company pay to appear ahead of others?</h3><p class="faq-a">No, because there is no list to appear ahead on. You are matched with a company, not shown a ranking of advertisers. Matching runs on coverage, the type of work and the published standards. A company that fails those standards is removed however much it has paid in the past, and a company that meets them cannot buy its way past a better-fitting competitor.</p></div>
+    <div class="qa"><h3>Do you sell my details to lots of companies?</h3><p class="faq-a">No. Your request goes to the company you are matched with so it can arrange the inspection you asked for. It is not auctioned, bundled or resold as part of a lead list. If you ask for a second opinion, we tell you before passing your details to a second company. You can also ask us to withdraw your details entirely at any point.</p></div>
+    <div class="qa"><h3>Will quotes through FoundationMatch cost more?</h3><p class="faq-a">They should not, and you can check. Every partner agrees to written itemised quotes, and our cost pages publish the going ranges: piers at $1,000–$2,500 each installed and a typical structural repair at $4,000–$12,000. Put any quote next to those ranges and ask about every line that sits outside them. A fair company will explain the difference in writing.</p></div>
+    <div class="qa"><h3>If the repair goes wrong, what is FoundationMatch responsible for?</h3><p class="faq-a">The repair contract and warranty sit between you and the company that did the work, and that company is responsible for putting defects right under its warranty terms. Our responsibility is the matching: if a partner ignores its documented warranty or breaks the published standards, report it to us. Partners who do that are removed, and your report is part of that decision.</p></div>
+</section>
+<section>
+  <h2>Related guides</h2>
+  <div class="city-grid">
+      <a class="city-card" href="about.html"><strong>About FoundationMatch: a matching service, not a contractor</strong></a>
+      <a class="city-card" href="how-to-choose-a-foundation-repair-company.html"><strong>Foundation Repair Companies: The Verification Checklist Before You Sign</strong></a>
+      <a class="city-card" href="how-it-works.html"><strong>How Foundation Repair Works, Step by Step</strong></a>
+      <a class="city-card" href="foundation-repair-cost.html"><strong>Foundation Repair Cost: What It Runs and How to Check a Quote</strong></a>
+      <a class="city-card" href="foundation-repair.html"><strong>What Is Foundation Repair?</strong></a>
+  </div>
+</section>
+
+<section class="cta" id="quote">
+  <h2>Request a free foundation inspection</h2>
+  <p>Tell us where you are and what you are seeing — a local specialist will call you back to schedule it.</p>
+  <!-- PLACEHOLDER: form endpoint not connected yet. Wire action="#" to the lead
+       endpoint / CRM before launch. -->
+  <form action="#" method="post">
+    <label>Full name
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+    <label>Phone number
+      <input type="tel" name="phone" autocomplete="tel" required>
+    </label>
+    <label>City
+      <input type="text" name="city" required>
+    </label>
+    <label>What are you noticing? (optional)
+      <textarea name="details" rows="3" placeholder="Cracks, sticking doors, sloping floors, water in the basement..."></textarea>
+    </label>
+    <button type="submit">Request my free inspection</button>
+  </form>
+  <!-- PLACEHOLDER: call-tracking number goes here before launch. No number is
+       shown in the draft on purpose — do not invent one. -->
+  <p class="call-note">Prefer to talk first? [Call-tracking phone number to be added before launch]</p>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>FoundationMatch</strong> connects homeowners with independent local foundation specialists. We are an information and matching service, not a contractor — your inspection and repair are handled by the local professional you are matched with.</p>
+    <div class="foot-cols">
+    <div class="foot-col"><h3>Services</h3>
+      <ul>
+        <li><a href="foundation-repair.html">Foundation repair</a></li>
+        <li><a href="pier-installation.html">Pier installation</a></li>
+        <li><a href="slabjacking.html">Slabjacking</a></li>
+        <li><a href="crawl-space-repair.html">Crawl-space repair</a></li>
+        <li><a href="basement-waterproofing-drainage.html">Waterproofing &amp; drainage</a></li>
+        <li><a href="foundation-crack-repair.html">Crack repair</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Problems</h3>
+      <ul>
+        <li><a href="foundation-wall-cracks.html">Wall cracks</a></li>
+        <li><a href="sticking-doors-foundation-problem.html">Sticking doors</a></li>
+        <li><a href="uneven-floors.html">Uneven floors</a></li>
+        <li><a href="bowed-basement-walls.html">Bowed walls</a></li>
+        <li><a href="sinking-foundation.html">Sinking foundation</a></li>
+        <li><a href="water-in-basement-foundation.html">Water in basement</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Guides</h3>
+      <ul>
+        <li><a href="foundation-repair-cost.html">Repair costs</a></li>
+        <li><a href="foundation-repair-insurance-financing.html">Insurance &amp; financing</a></li>
+        <li><a href="foundation-types.html">Foundation types</a></li>
+        <li><a href="foundation-repair-glossary.html">Glossary</a></li>
+        <li><a href="watering-your-foundation.html">Watering your foundation</a></li>
+        <li><a href="frost-heave-explained.html">Frost heave explained</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>About</h3>
+      <ul>
+        <li><a href="about.html">About FoundationMatch</a></li>
+        <li><a href="how-we-make-money.html">How we make money</a></li>
+        <li><a href="how-to-choose-a-foundation-repair-company.html">Choosing a company</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+      </ul>
+    </div>
+    <div class="foot-col"><h3>Cities</h3>
+      <ul>
+        <li><a href="foundation-repair-des-moines-ia.html">Des Moines, IA</a></li>
+        <li><a href="foundation-repair-baton-rouge-la.html">Baton Rouge, LA</a></li>
+        <li><a href="foundation-repair-new-orleans-la.html">New Orleans, LA</a></li>
+        <li><a href="foundation-repair-shreveport-la.html">Shreveport, LA</a></li>
+        <li><a href="foundation-repair-lexington-ky.html">Lexington, KY</a></li>
+        <li><a href="foundation-repair-madison-wi.html">Madison, WI</a></li>
+        <li><a href="foundation-repair-cedar-rapids-ia.html">Cedar Rapids, IA</a></li>
+        <li><a href="foundation-repair-gulfport-ms.html">Gulfport, MS</a></li>
+        <li><a href="foundation-repair-boise-id.html">Boise, ID</a></li>
+        <li><a href="foundation-repair-abilene-tx.html">Abilene, TX</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
